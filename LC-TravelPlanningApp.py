@@ -17,7 +17,7 @@ def generate_itinerary(country, number_of_nights, trip_type):
     prompt_template = "Generate a daywise detailed itinerary with specific place names for a {triptype} trip to {country} for {nights} nights. "
     tripprompt = prompt_template.format(triptype = trip_type, country = country, nights=number_of_nights)
     st.text(tripprompt)
-    llm = OpenAI(openai_api_key="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", temperature=0.9, max_tokens=3500)
+    llm = OpenAI(openai_api_key="Your openai api key", temperature=0.9, max_tokens=3500)
     result = llm(tripprompt)
     
     return result
